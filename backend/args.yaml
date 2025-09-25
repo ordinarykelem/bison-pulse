@@ -1,0 +1,35 @@
+# ByteTracker Configuration
+# This file contains the configuration for the ByteTracker used in bison detection
+
+# Tracking parameters
+track_thresh: 0.5          # Detection confidence threshold for tracking
+track_buffer: 30           # Number of frames to keep in track buffer
+match_thresh: 0.8          # IoU threshold for track matching
+mot20: false               # Use MOT20 evaluation metrics
+
+# Detection parameters
+conf_thresh: 0.25          # Confidence threshold for detections
+iou_thresh: 0.45           # IoU threshold for NMS
+max_det: 1000              # Maximum number of detections per image
+
+# Model parameters
+device: ""                 # Device to run on (empty for auto-detect)
+half: false                # Use half precision (FP16)
+dnn: false                 # Use OpenCV DNN for ONNX inference
+
+# Stream parameters
+source: "rtsps://cr-14.hostedcloudvideo.com:443/publish-cr/_definst_/G0W2EP7IKAXYETM1ANDVQ6DBRXNXCN7VK3MM7SP9/6b55ae911a8dbd2bd7d3a75ae4547acc976d0b9e?action=PLAY"
+show: false                # Show video stream
+save: false                # Save video output
+save_txt: false            # Save results to txt file
+save_conf: false           # Save confidences in labels
+save_crop: false           # Save cropped prediction boxes
+show_labels: true          # Show object labels
+show_conf: true            # Show confidence scores
+vid_stride: 1              # Video frame-rate stride
+line_width: 3              # Bounding box thickness
+
+# Bison-specific parameters
+bison_class_id: 0          # Class ID for bison in the model
+movement_threshold: 10     # Pixel threshold for movement detection
+history_size: 30           # Number of frames to keep for movement calculation

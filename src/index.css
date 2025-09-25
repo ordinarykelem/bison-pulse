@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Wildlife monitoring theme with earth tones */
+    --background: 35 20% 98%;
+    --foreground: 30 15% 15%;
+
+    --card: 35 30% 96%;
+    --card-foreground: 30 15% 15%;
+
+    --popover: 35 30% 96%;
+    --popover-foreground: 30 15% 15%;
+
+    --primary: 25 65% 35%;
+    --primary-foreground: 35 30% 96%;
+
+    --secondary: 120 25% 45%;
+    --secondary-foreground: 35 30% 96%;
+
+    --muted: 35 15% 90%;
+    --muted-foreground: 30 10% 55%;
+
+    --accent: 45 85% 55%;
+    --accent-foreground: 30 15% 15%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 35 30% 96%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 90%;
+    --ring: 25 65% 35%;
+
+    /* Custom wildlife monitoring tokens */
+    --live-indicator: 120 70% 45%;
+    --offline-indicator: 0 65% 55%;
+    --warning-indicator: 45 95% 55%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25 65% 35%), hsl(25 65% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(120 25% 45%), hsl(120 35% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(35 30% 96%), hsl(35 20% 92%));
+    --gradient-chart: linear-gradient(180deg, hsl(25 65% 35% / 0.1), hsl(25 65% 35% / 0.05));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 12px hsl(30 15% 15% / 0.08);
+    --shadow-elevated: 0 8px 24px hsl(30 15% 15% / 0.12);
+    --shadow-glow: 0 0 20px hsl(25 65% 35% / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode wildlife theme */
+    --background: 30 15% 8%;
+    --foreground: 35 20% 92%;
+
+    --card: 30 15% 12%;
+    --card-foreground: 35 20% 92%;
+
+    --popover: 30 15% 12%;
+    --popover-foreground: 35 20% 92%;
+
+    --primary: 25 65% 55%;
+    --primary-foreground: 30 15% 8%;
+
+    --secondary: 120 25% 35%;
+    --secondary-foreground: 35 20% 92%;
+
+    --muted: 30 10% 18%;
+    --muted-foreground: 35 15% 65%;
+
+    --accent: 45 85% 65%;
+    --accent-foreground: 30 15% 8%;
+
+    --destructive: 0 70% 65%;
+    --destructive-foreground: 30 15% 8%;
+
+    --border: 30 10% 22%;
+    --input: 30 10% 18%;
+    --ring: 25 65% 55%;
+
+    /* Dark mode indicators */
+    --live-indicator: 120 70% 55%;
+    --offline-indicator: 0 65% 65%;
+    --warning-indicator: 45 95% 65%;
+    
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25 65% 45%), hsl(25 65% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(120 25% 35%), hsl(120 35% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(30 15% 12%), hsl(30 15% 8%));
+    --gradient-chart: linear-gradient(180deg, hsl(25 65% 55% / 0.15), hsl(25 65% 55% / 0.05));
+    
+    /* Dark shadows */
+    --shadow-card: 0 4px 12px hsl(30 15% 0% / 0.25);
+    --shadow-elevated: 0 8px 24px hsl(30 15% 0% / 0.35);
+    --shadow-glow: 0 0 20px hsl(25 65% 55% / 0.25);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

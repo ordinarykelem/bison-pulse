@@ -1,0 +1,40 @@
+services:
+  # Backend FastAPI Service
+  - type: web
+    name: bison-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python backend/simple_server.py
+    envVars:
+      - key: RTSP_URL
+        value: rtsps://cr-14.hostedcloudvideo.com:443/publish-cr/_definst_/G0W2EP7IKAXYETM1ANDVQ6DBRXNXCN7VK3MM7SP9/6b55ae911a8dbd2bd7d3a75ae4547acc976d0b9e?action=PLAY
+      - key: API_HOST
+        value: 0.0.0.0
+      - key: API_PORT
+        value: 10000
+      - key: LOG_LEVEL
+        value: INFO
+    healthCheckPath: /health
+
+  # Frontend React Service
+  - type: web
+    name: bison-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: bison-backend
+          property: host
+      - key: VITE_STREAM_URL
+        fromService:
+          type: web
+          name: bison-backend
+          property: host
+        value: /stream
+      - key: VITE_USE_MOCK_DATA
+        value: false
