@@ -69,11 +69,11 @@ const ConnectionStatus = ({ status, onReconnect }: ConnectionStatusProps) => {
         </div>
         
         <div className="text-xs text-muted-foreground">
-          <p>Backend URL: http://localhost:8080</p>
+          <p>Backend URL: https://bison-pulse.onrender.com</p>
           <p>Expected endpoints: /api/latest, /api/history, /stream</p>
           {!status.isLive && (
             <p className="text-orange-500 mt-2">
-              ⚠️ Make sure your Python bison tracker is running on port 8080
+              ⚠️ Backend connection failed - using mock data
             </p>
           )}
         </div>

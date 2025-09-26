@@ -17,7 +17,7 @@ export class BisonStreamManager {
     this.onMessage = onMessage;
     this.onStatusChange = onStatusChange;
     // Update to match your Python server port and endpoint
-    this.streamUrl = import.meta.env.VITE_STREAM_URL || 'http://localhost:8080/stream';
+    this.streamUrl = import.meta.env.VITE_STREAM_URL || 'https://bison-pulse.onrender.com/stream';
   }
 
   async start() {

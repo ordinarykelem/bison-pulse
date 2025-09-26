@@ -1,7 +1,7 @@
 import { BisonDetection } from '../types';
 
-// Update API base to match your Python server port
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+// Bison Pulse API configuration
+const API_BASE = import.meta.env.VITE_API_URL || 'https://bison-pulse.onrender.com';
 
 export async function getLatest(): Promise<BisonDetection> {
   try {
