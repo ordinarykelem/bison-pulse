@@ -35,7 +35,7 @@ LOG_LEVEL=INFO
 - **Name**: `bison-frontend`
 - **Environment**: `Static Site`
 - **Build Command**: `npm install && npm run build`
-- **Publish Directory**: `dist`
+- **Publish Directory**: `cdist`
 - **Plan**: Free
 
 ### Environment Variables:

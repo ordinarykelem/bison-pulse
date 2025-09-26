@@ -1,5 +1,5 @@
 {
-  "name": "bison-pulse-tracking",
+  "name": "bison-pulse",
   "private": true,
   "version": "1.0.0",
   "description": "Real-time bison tracking and monitoring dashboard",

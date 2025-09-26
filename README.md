@@ -1,4 +1,4 @@
-# Real-time Bison Tracking Dashboard
+# Bison Pulse - Real-time Bison Tracking System
 
 A professional, responsive analytics dashboard for monitoring bison populations in real-time. Built with React, TypeScript, Tailwind CSS, and Recharts.
 
